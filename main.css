@@ -316,7 +316,8 @@ img {
   -moz-background-clip: padding;
   border-radius: 6px 6px 8px 8px;
   background-clip: padding-box;
-  background: #fff;
+/*  background: #fff; */
+  background: #ffdbac;
 }
 .loading .finger-item span {
   position: absolute;
@@ -334,7 +335,8 @@ img {
   margin: 0 0 2px 0;
   width: 100%;
   height: 2px;
-  background: #4492f4;
+/*  background: #4492f4; */
+background: #00BFA5;
 }
 .loading .finger-item i {
   position: absolute;
@@ -348,7 +350,8 @@ img {
   -moz-background-clip: padding;
   border-radius: 10px 10px 7px 7px;
   background-clip: padding-box;
-  background: #4492f4;
+/*  background: #4492f4; */
+  background: #00BFA5;
 }
 .loading .last-finger {
   position: relative;
@@ -369,7 +372,8 @@ img {
   -moz-background-clip: padding;
   border-radius: 0 5px 14px 0;
   background-clip: padding-box;
-  background: #fff;
+/*  background: #fff; */
+  background: #ffdbac;
   -webkit-animation: finger-5-animation 2s infinite linear;
   animation: finger-5-animation 2s infinite linear;
 }
@@ -379,7 +383,7 @@ img {
   top: -8px;
   width: 22px;
   height: 8px;
-  background: #fff;
+  background: #ffdbac;
   overflow: hidden;
 }
 .loading .last-finger-item i:after {
@@ -395,7 +399,8 @@ img {
   -moz-background-clip: padding;
   border-radius: 0 0 15px 15px;
   background-clip: padding-box;
-  background: #4492f4;
+/*  background: #4492f4; */
+ background: #00BFA5;
 }
 @-webkit-keyframes finger-1-animation {
   0% {
@@ -1517,7 +1522,9 @@ article .bar {
   position: absolute;
   top: 0;
   left: 0;
-  background: #769ff4;}
+/*background: #769ff4;*/
+  background: #00BFA5;
+}
 
 article .bar-box {
   display: none;
@@ -1533,7 +1540,8 @@ article .bar-box {
   width: 120px;
   height: 30px;
   padding: 0 20px;
-  background: #6589d4;
+/*  background: #6589d4; */
+  background: #00BFA5;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
   color: #fff;

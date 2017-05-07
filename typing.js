@@ -62,6 +62,7 @@ var model = {
 
 
    saveResult : function(accuracy,error,depressions,speed,wordsPerMinute){
+                  console.log(accuracy);
                   var user = firebase.auth().currentUser;
                   var id = user.uid;
 				          var passageId = sessionStorage.currentPassageId;
@@ -109,6 +110,9 @@ var presenter = {
     getCurrentUser : function(){
                      console.log('Current user is : '+getCurrentUser());
                      view.setHeaderEmail(getCurrentUser());
+    },
+    saveResultSuccess : function(){
+                    console.log("Data saved sueecssfully");
     }
 };
 var view = {

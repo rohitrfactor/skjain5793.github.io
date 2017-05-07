@@ -184,18 +184,18 @@ aside {
 }
 
 header {
-    min-height: auto;
+  /*  min-height: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: center;
+    background-position: center; */
     background-image: url(../img/header.jpg);
     color: #fff
 }
 
 header .header-content {
-    padding: 100px 15px
+  /*  padding: 100px 15px */
 }
 
 header .header-content .header-content-inner h1 {
@@ -219,7 +219,8 @@ header .header-content .header-content-inner p {
 
 @media (min-width: 768px) {
     header {
-        min-height:100%
+      /*  min-height:100% */
+      min-height: 40%;
     }
 
     header .header-content {

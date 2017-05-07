@@ -120,14 +120,14 @@ var view = {
                     var passageType = passage.type;
 
 
-                    var startbtn = "<button id='start'  class='button' onclick='view.createClickHandler(\""+passageString+"\",\""+passageStringId+"\",\""+passageType+"\",this.id)'>Start</button>";
+                    var startbtn = "<button id='start'  class='button' onclick='view.createClickHandler(\""+passageString+"\",\""+passageStringId+"\",\""+passageType+"\",this.id)'>Start Test</button>";
 
                     var practicebtn = "<button id='practice' class='button' onclick='view.createClickHandler(\""+passageString+"\",\""+passageStringId+"\",\""+passageType+"\",this.id)'>Practice</button>";
 
                   //  div.onclick = view.createClickHandler(passageString,passageStringId,passageType);
 
                     var passageCode = passage.Code;
-                    div.innerHTML= '<div class="inside-module"><div class="bar-full"><span class="bar"></span><div class="bar-box"><span class="bar-flip">'+passageStringId+'</span></div></div><div class="pad"><p>'+passageString+'</p><br><span style="width:30%;float:right">'+startbtn+'&nbsp;&nbsp;&nbsp;'+practicebtn+'</span></div></div>';
+                    div.innerHTML= '<div class="inside-module"><div class="bar-full"><span class="bar"></span><div class="bar-box"><span class="bar-flip">'+passageStringId+'</span></div></div><div class="pad"><p>'+passageString+'</p><br><span style="width:40%;float:right">'+startbtn+'&nbsp;&nbsp;&nbsp;'+practicebtn+'</span></div></div>';
                     passagesElement.appendChild(div);
 
                     (function($) {

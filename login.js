@@ -29,7 +29,7 @@ var model = {
                   firebase.auth().signOut();
                   console.log('Successfully logged out');
               },
-	    googleLogin : function()
+	  googleLogin : function()
 			 {
 					   var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -37,9 +37,9 @@ var model = {
 								  // This gives you a Google Access Token. You can use it to access the Google API.
 								 // var token = result.credential.accessToken;
 								  // The signed-in user info.
-								  var user = result.user;
-        						          console.log('Login successful'+user.email);
-								  presenter.loginSuccess(user);
+								 // var user = result.user;
+                                  console.log('Login successful'+user.email);
+								  presenter.loginSuccess(firebaseUser);
 						  // ...
 						})
 						.catch(function(error) {
@@ -76,7 +76,7 @@ var presenter = {
                           localStorage.setItem('currentUserObject', JSON.stringify(firebaseUser));
                           window.location = "passages.html";
                   },
-  	googleLogin    : function(){
+	googleLogin    : function(){
 							console.log("sending login request");
 							model.googleLogin();
 				 }
@@ -99,7 +99,7 @@ var view = {
 		   googleSignInButton.onclick = function(){
 				console.log("google sign in processing");
 				presenter.googleLogin();
-
+				var provider = new firebase.auth.GoogleAuthProvider();
 			}
 
             loginForm.onsubmit = function(e){
