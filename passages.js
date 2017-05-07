@@ -118,16 +118,59 @@ var view = {
                     var passageString = passage.PassageString;
                     var passageStringId = passage.Code;
                     var passageType = passage.type;
-
-
-                    var startbtn = "<button id='start'  class='button' onclick='view.createClickHandler(\""+passageString+"\",\""+passageStringId+"\",\""+passageType+"\",this.id)'>Start Test</button>";
-
-                    var practicebtn = "<button id='practice' class='button' onclick='view.createClickHandler(\""+passageString+"\",\""+passageStringId+"\",\""+passageType+"\",this.id)'>Practice</button>";
-
+                    
+                    var startButton = document.createElement('button');
+                    startButton.id = 'start';
+                    startButton.className = 'button';
+                    startButton.onclick = view.createClickHandler(passageString,passageStringId,passageType,'start');
+                    startButton.innerHTML ='Start Test';
+          
+                    var practiceButton = document.createElement('button');
+                    practiceButton.className = 'practice';
+                    practiceButton.className = 'button';
+                    practiceButton.onclick = view.createClickHandler(passageString,passageStringId,passageType,'practice');
+                    practiceButton.innerHTML ='Practice';
+          
+                    var padSpan = document.createElement('span');
+                    padSpan.style.width = '40%';
+                    padSpan.style.float = 'right';
+                    
+                    var para = document.createElement('p');
+                    para.innerHTML = passageString;
+                    
+                    var padDiv = document.createElement('div');
+                    padDiv.className = 'pad';
+                    
+                    padDiv.appendChild(para);
+                    padDiv.appendChild(padSpan);
+          
+                    var barFlipSpan = document.createElement('span');
+                    barFlipSpan.className = 'bar-flip';
+                    barFlipSpan.innerHTML = passageStringId;
+          
+                    var barBoxDiv = document.createElement('div');
+                    barBoxDiv.className = 'bar-box';
+                    
+                    barBoxDiv.appendChild(barFlipSpan);
+                    var barSpan = document.createElement('span');
+                    barSpan.className = 'bar';
+                  
+                    var barFullDiv = document.createElement('div');
+                    barFullDiv.className = 'bar-full';
+                    barFullDiv.appendChild(barSpan);
+                    barFullDiv.appendChild(barBoxDiv);
+          
+                    var insideDiv = document.createElement('div');
+                    insideDiv.className = 'inside-module';
+                    insideDiv.appendChild(barFullDiv);
+                    div.appendChild(insideDiv);
+                    
+                        
                   //  div.onclick = view.createClickHandler(passageString,passageStringId,passageType);
 
                     var passageCode = passage.Code;
-                    div.innerHTML= '<div class="inside-module"><div class="bar-full"><span class="bar"></span><div class="bar-box"><span class="bar-flip">'+passageStringId+'</span></div></div><div class="pad"><p>'+passageString+'</p><br><span style="width:40%;float:right">'+startbtn+'&nbsp;&nbsp;&nbsp;'+practicebtn+'</span></div></div>';
+                 //  div.innerHTML= '<div class="inside-module"><div class="bar-full"><span class="bar"></span><div class="bar-box"><span class="bar-flip">'+passageStringId+'</span></div></div><div class="pad"><p>'+passageString+'</p><br><span style="width:40%;float:right">'+startbtn+'&nbsp;&nbsp;&nbsp;'+practicebtn+'</span></div></div>';
+
                     passagesElement.appendChild(div);
 
                     (function($) {
