@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <title>Learn Typing</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/typing.css">
+    <script src="js/util.js"></script>
+    <script src="js/units.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/tutor.js"></script>
+    <script>
+    // Log request
+    if (typeof OnePixel == 'object' && typeof OnePixel.log == 'function') {
+
+        OnePixel.log('name', 'QuickQWERTY',
+                     'version', Tutor.VERSION)
+
+        Tutor.setLogFunction(OnePixel.log);
+    }
+
+    // Canonicalize URL
+    (function() {
+        var webMode = /^https?:$/i.test(window.location.protocol)
+        var comMode = /\bquickqwerty.com$/i.test(window.location.hostname)
+        var href = window.location.href
+
+        // Redirect http://example.com/index.html to http://example.com/.
+        if (webMode && href.search(/\/index.html\b/i) >= 0) {
+            window.location.href = href.replace(/\/index.html/, '/')
+        }
+
+        // Redirect http://www.quickqwerty.com/ to http://quickqwerty.com/.
+        if (comMode && href.search(/^https?:\/\/www\./i) >= 0) {
+            window.location.href = href.replace(/:\/\/www\./i, '://')
+        }
+
+    })()
+
+    // Start tutor, set version and check for updates
+    window.onload = function()
+    {
+        Tutor.init()
+
+        if (typeof Update == 'object' && typeof Update.check == 'function') {
+            Update.check()
+        }
+    }
+    </script>
+
+
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Learn Typing</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="passages.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="testhistory.html">Test History</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#">Payments</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="page-scroll dropdown-toggle" data-toggle="dropdown" href="#"><span  id="user_email"></span><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" id="signout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">Welcome to Typing Website</h1>
+                <h2></h2>
+                <hr>
+                <p></p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Main -->
+    <div id="mainWrapper">
+    <div id="main">
+        <div id="content">
+            <div id="unitLinks"></div>
+
+            <div id="practicePanelWrapper">
+            <div id="update" class="warning">
+                <p>
+                A new version of QuickQWERTY is available. You are using
+                <strong>QuickQWERTY&nbsp;<span id="thisVersion"></span></strong>.
+                The latest stable version of this application is
+                <strong>QuickQWERTY&nbsp;<span id="stableVersion"></span></strong>.
+                </p><p>
+                <a id="downloadUpdate" href="#">Download</a>
+                <a id="ignoreUpdate" href="#">Hide this message</a>
+                </p>
+            </div>
+            <div id="practicePanel">
+                <div id="previousLink">
+                    <!--<a href="#previous">&laquo;</a>-->
+                </div>
+
+                <div id="practicePane">
+
+                    <div id="subunitLinks">
+                        <div class="stretch"></div>
+                    </div> <!-- End subunitLinks -->
+
+                    <div id="target"></div>
+
+                    <div id="feedbackPane">
+                        <div id="statusPane">
+                            <div id="status"></div>
+                            <div id="remark"></div>
+                            <div id="advice"></div>
+                        </div>
+                        <div id="progressPane">
+                            <div id="progress">
+                                <progress id="progressBar" value="0" max="100">
+                                </progress>
+                                <div>
+                                    <span id="progressPercent"></span>
+                                </div>
+                            </div>
+                            <div id="restartLink">
+                                <a href="#restart" title="Start over">Restart</a>
+                            </div>
+                        </div>
+                        <div id="resultPane">
+                            <div id="speed"></div>
+                            <div id="error"></div>
+                            <div id="smiley"></div>
+                        </div>
+                    </div> <!-- End feedbackPane -->
+
+                    <div id="inputPane">
+                        <textarea id="input" rows="5" autocomplete="off"
+                                  spellcheck="false"></textarea>
+                    </div> <!-- End inputPane -->
+
+                    <div id="alternateUnitLinks">
+                    </div>
+
+                </div> <!-- End practicePane -->
+
+              <!--  <div id="nextLink">
+                    <a href="#next">&raquo;</a>
+                </div> -->
+            </div> <!-- End practicePanel -->
+
+            <div id="guidePane">
+                <div>
+                    <a id="guideLink" href="#"></a>
+                </div>
+                <div id="guide"></div>
+            </div> <!-- End guidePane -->
+            </div> <!-- End practicePanelWrapper -->
+
+            <noscript>
+            <div id="noscriptWrapper">
+                <div id="noscript">
+                JavaScript should be enabled to run this application.
+                <img src="http://susam.in/onepixel/?name=QuickQWERTY&NOSCRIPT">
+                </div>
+            </div>
+            </noscript>
+
+        </div> <!-- End content -->
+
+      <!--  <div id="sidebar">
+            <div class="fb-like-box"
+                 data-href="https://www.facebook.com/qwertyquick"
+                 data-width="239" data-show-faces="true" data-header="false"
+                 data-stream="false" data-show-border="true"></div>
+        </div>  End sidebar -->
+
+
+    </div> <!-- End main -->
+    </div> <!-- End mainWrapper -->
+
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+    <script src="practice.js"></script>
+
+
+</body>
+
+</html>
