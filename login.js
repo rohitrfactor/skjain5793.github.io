@@ -38,13 +38,13 @@ var model = {
 								 // var token = result.credential.accessToken;
 								  // The signed-in user info.
 								  var user = result.user;
-                  console.log('Login successful'+user.email);
-								  presenter.loginSuccess(user);
+        						          console.log('Login successful'+user.email);
+								//  presenter.loginSuccess(user);
 						  // ...
 						})
 						.catch(function(error) {
 								 console.log('login error'+error.message);
-								 presenter.loginError(error.message);
+								// presenter.loginError(error.message);
 						});
 
 			 }
