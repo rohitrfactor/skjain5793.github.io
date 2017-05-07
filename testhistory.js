@@ -77,7 +77,7 @@ var view = {
         //            var passageStringId = history.Code;
         //            div.onclick = view.createClickHandler(passageString,passageStringId);
                     div.innerHTML='<div class="timeline__item__station"></div><div class="timeline__item__content"><h2 class="timeline__item__content__date">'+time+'</h2><p class="timeline__item__content__description">'+'Accuracy '+accuracy+'<br>Error '+error+'<br>Word per minute '+wordsPerMinute+'</p></div>';
-                    historyElement.append(div);
+                    historyElement.appendChild(div);
                     customWayPoint('.timeline__item--'+i, 'timeline__item-bg', defaultOffset);
 
     },
