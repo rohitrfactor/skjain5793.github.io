@@ -128,7 +128,7 @@ var view = {
 
                     var passageCode = passage.Code;
                     div.innerHTML= '<div class="inside-module"><div class="bar-full"><span class="bar"></span><div class="bar-box"><span class="bar-flip">'+passageStringId+'</span></div></div><div class="pad"><p>'+passageString+'</p><br><span style="width:30%;float:right">'+startbtn+'&nbsp;&nbsp;&nbsp;'+practicebtn+'</span></div></div>';
-                    passagesElement.append(div);
+                    passagesElement.appendChild(div);
 
                     (function($) {
                       $.fn.visible = function(partial) {
